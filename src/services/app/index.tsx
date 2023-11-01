@@ -3,7 +3,9 @@ import App from "./store";
 
 const AppContext = React.createContext<App | null>(null);
 
-export const AppStore: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AppStore: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   return (
     <AppContext.Provider value={new App()}>{children}</AppContext.Provider>
   );
